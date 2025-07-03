@@ -3,7 +3,7 @@ import re
 text = input("Digita el correo: ")
 pattern = r"""
     ^([a-zA-Z0-9]) # Inicio del nombre
-    ([\w\.\+-_@]+)? # Mediados del nombre
+    ([\w\.\+-_[^@]]+)? # Mediados del nombre
     ([a-zA-Z0-9])? # Finales del nombre
     @[a-zA-Z0-9] # Inicio del Dominio
     [a-zA-Z0-9-]+ # Fin del Dominio
