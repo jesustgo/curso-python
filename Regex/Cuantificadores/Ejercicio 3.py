@@ -1,9 +1,9 @@
 import re
 
-text = "El gato está en la casa. La gata también está en la casa"
-pattern = "gata?"
+text = "123456789"
+pattern = r"\+?3?4?\d{9}"
 coincidences = re.findall(pattern, text)
 
 print(coincidences)
 
-# El ? es para saber si hay 1 o 0 veces determinado caracter
+# El ? es para saber si hay 0 o mas veces determinado patron
