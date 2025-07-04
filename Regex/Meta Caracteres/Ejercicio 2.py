@@ -1,7 +1,8 @@
 import re
 
 files = "file1.txt file2.pdf midu-of.webp secret.txt"
-pattern = r"\w{1,6}\.txt"
+pattern = r"\b\w{1,6}\.\w{1,6}\b"
+
 
 matches = re.finditer(pattern, files)
 for match in matches:

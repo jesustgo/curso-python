@@ -3,12 +3,10 @@ try:
     contador = 2
     if num > 1:
         while contador <= num:
-            for i in range(2, int(num**0.5) + 1):    
-                if contador % i == 0 and contador == i:
-                    print(contador)
+            for i in range(2, int(contador**0.5) + 1):    
+                if contador % i == 0 and contador != i:
                     contador += 1
-                else:
-                    contador += 1
+                    break
             else:
                 print(contador)
                 contador += 1
