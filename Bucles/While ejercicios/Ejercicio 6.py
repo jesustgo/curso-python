@@ -1,14 +1,20 @@
 try:
     num = int(input("Digita un numero entero positivo: "))
-    contador = 1
-    if num > 0:
+    contador = 2
+    if num > 1:
         while contador <= num:
-            if contador == 2 or contador == 3 or contador == 5 or (contador % 2 != 0 and contador % 3 != 0 and contador % 5 != 0 and contador != 1):
+            for i in range(2, int(num**0.5) + 1):    
+                if contador % i == 0 and contador == i:
+                    print(contador)
+                    contador += 1
+                else:
+                    contador += 1
+            else:
                 print(contador)
                 contador += 1
-            else:
-                contador += 1
+    elif num == 1:
+        print("No hay numeros primos para 1")
     else:
         print(f"El numero {num} no es valido porque no es positivo")
-except:
+except ValueError:
     print("No digitaste un numero por favor vuelve a intentarlo")
